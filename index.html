@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="background: #fff5ee">
 <head>
-  <title>THE GRE TESTS</title>
+  <title>Welcome|Index</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,7 +25,19 @@
       text-align: center;
       overflow: hidden; /* Hide overflowing content */
     }
-
+  .gold{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1000px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 8px; /* Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      margin: 20px auto;
+      text-align: center;
+      overflow: hidden; /* Hide overflowing content */
+    }
     .nav1 {
       display: flex;
       justify-content: center; /* Center content horizontally */
@@ -230,7 +242,7 @@
     /* Example of text styling inside the box */
     .box1 p, .box2 p {
       font-family: 'Georgia', serif; /* Elegant serif font */
-      font-size: 20px; /* Slightly larger font size */
+      font-size: 18px; /* Slightly larger font size */
       line-height: 1.6; /* Increased line height for readability */
       color: #333; /* Dark grey text color */
       margin: 20px 0; /* Vertical spacing */
@@ -270,25 +282,22 @@
     <div class="image-box">
       <img src="gre.png" alt="GRE Image">
     </div>
-    <h1 class="heading">WELCOME TO GRE TESTING PORTAL (CONDUCTED BY ETS)</h1>
-    <div id="clock" class="clock">The current time is 00:00:00</div>
-    <div class="table-container">
-      <p>Select the country from which you would like to take the GRE</p>
-      <div class="flex-container">
-        <div class="box1">
-          <p>Take the GRE from non-Asian countries</p>
-        </div>
-        <div class="box2">
-          <p>Take the GRE from Asian countries</p>
-        </div>
-      </div>
     </div>
-  </div>
+	<div id="clock" class="clock">The current time is 00:00:00</div>
+    <div class="silver">
+    <a href = " " >Register for the GRE</a>
+    <a href = "https://vm5.github.io/scheuldegre/"> Tentative schedule(s)</a>
+   </div>
+  
+   <div class="box1">
+	<h4>Announcements</h4>
+        <p class="new-sticker">Welcome to GRE Testing Portal Asia</p>
+   </div>
 <footer>
-      <h5 class="heading2">&copy; GRE TESTING PORTAL</h5>
+<h5 class="heading2">&copy; GRE TESTING PORTAL</h5>
    	</footer>
-  <script>
-    function gettime(){
+<script>
+function gettime(){
 	const now = new Date();
   	const hours = String(now.getHours()).padStart(2, '0');
   	const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -304,30 +313,10 @@ currenttime.textContent = `${gettime()}`;
 updatetime();
 setInterval(updatetime, 1000);
 document.querySelector("#clock").style.textAlign = "right";
+document.querySelector(".box1").style.width = "1270px";
+document.querySelector(".box1").style.height = "200px;";
+document.querySelector(".silver").style.backgroundColor = "violet";
 
-    let button1 = document.createElement("button");
-    button1.innerText = "Register for GRE from non-Asian countries";
-    button1.className = "styled-button";
-    document.querySelector(".box1").appendChild(button1);
-
-    let button2 = document.createElement("button");
-    button2.innerText = "Register for GRE from Asian countries";
-    button2.className = "styled-button";
-    document.querySelector(".box2").appendChild(button2);
-
-    button1.addEventListener("click",() => {
-	window.location.href = "https://vm5.github.io/homegrena/";
-   });
-   button2.addEventListener("click",() => {
-	window.location.href = "https://vm5.github.io/homeasia/"
-   });
-
-  let colouroftitle = document.querySelector(".heading");
-  colouroftitle.style.backgroundColor = "orange";  ;  
-  let colouroftext1 = document.querySelector(".box1 p");
-  colouroftext1.style.backgroundColor = "yellow";  
-  let colouroftext2 = document.querySelector(".box2 p");
-  colouroftext2.style.backgroundColor = "yellow";  
 
   let modebutton = document.createElement("button"); 
   modebutton.innerText = "Change light/dark mode";
@@ -355,7 +344,6 @@ document.querySelector(".version").style.fontSize = "30px";
 document.querySelector(".version").style.textAlign = "center";
 
 document.querySelector(".version").style.backgroundColor = "red";
-document.querySelector(".flex-container").style.backgroundColor = "purple";
-  </script>
+</script>
 </body>
 </html>
