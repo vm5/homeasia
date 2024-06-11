@@ -662,6 +662,35 @@ li {
     .styled-button:hover {
       background-color: #45a049; /* Darker green on hover */
     }
+.menu {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
  .clock {
       font-family: 'Courier New', Courier, monospace;
       font-size: 3em; /* Increase font size */
@@ -685,7 +714,9 @@ li {
           <img src="gre.png" alt="GRE Image">
         </div>
  
-        <li class="nav-item">
+      <nav class="menu">
+    <div class="menu-toggle" onclick="toggleMenu()">Important links</div>
+    <div class="menu-content">
           <a class="nav-link" href="https://vm5.github.io/THEGRETESTS/"><i class="far fa-copy"></i>Home</a>
           <a class="nav-link" href=""><i class="fas fa-file-signature"></i>
 Register for the GRE</a>
@@ -761,6 +792,10 @@ document.querySelector(".version").style.fontSize = "30px";
 document.querySelector(".version").style.textAlign = "center";
 
 document.querySelector(".version").style.backgroundColor = "red";
+  function toggleMenu() {
+      var menuContent = document.querySelector('.menu-content');
+      menuContent.classList.toggle('show');
+    }
 </script>
 </body>
 </html>
